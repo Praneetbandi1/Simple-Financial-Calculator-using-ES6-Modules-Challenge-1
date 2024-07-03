@@ -4,11 +4,33 @@
 
 <head>
     <title>Financial Calculator</title>
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
 </head>
 
 <body>
-    <h1> Financial Calculator</h1>
+    <div>
+<br>
+<h1 style="text-align:center">Financial Calculator</h1>
+<label>Principal</label>
+<input type="number" name="principal" placeholder="$" style="margin-left: 75px">
+<br><br>
+<label>Interest Rate </label>
+<input type="number" name="rate" id="rate" placeholder="in months" style="margin-left: 100 px">
+<br><br>
+<label>Time:</label>
+<input type="number" name="n" id="n" placeholder="N (#ofPeriods)" style="margin-left:120px">
+<br><br><br><br>
+<button id="interestRateCalculator"> Calculate Interest</button>
+<button id="loanPaymentCalculator">Calculate Loan Payment</button>
+<button id="investmentReturnCalculator"> Calculate Investment Value </button>
+<button id="reset">Reset</button>
+<br>
+<p id="interestRateResult"></p>
+<p id="loanPaymentResult"></p>
+<p id="investmentReturnResult"></p>
+<br><br>
+
+    </div>
 </body>
 
 </html>
