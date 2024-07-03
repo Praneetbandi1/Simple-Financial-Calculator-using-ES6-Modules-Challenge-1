@@ -1,0 +1,28 @@
+h1 {
+    font-style: normal;
+    font-size: 30px;
+    color: black;
+}
+
+div{
+    border:darkblue solid;
+    margin: 5px;
+    width: 600px;
+    height: 500px;
+    background-color: lightblue;
+    color: black;
+}
+button {
+    margin-left:10px;
+    color: white;
+    background-color: gray;
+    font-style: normal;
+}
+p{
+    margin-left: 20px;
+    margin-right: 20px
+}
+label {
+    margin-left:20px;
+    margin: right 20px;
+}
