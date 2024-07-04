@@ -1,1 +1,3 @@
 # Simple-Financial-Calculator-using-ES6-Modules-Challenge-1
+
+This project is about creating a financial calculator using the ES6 modules. The four modules should be main, Interest rate calculation, loan payment, and Investment return. The three modules that do not include the main have their own seperate formulas. Basic input validation is there to show that all the fields have been filled out properly.
