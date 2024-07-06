@@ -12,10 +12,10 @@ addEventListener("DOMContentLoaded",(event)=> {
         const principal=parseFloat(document.getElementById("principal").value);
         //Converts annual percentage rate to monthl 100*12=1200
         const rate=(parseFloat(document.getElementById("rate").value)/1200);
-        const time=parseFloat(docuemnt.getElementById("time").value);
+        const time=parseFloat(document.getElementById("time").value);
 
-        const intervalRateTotal=interestRateCalculator(principal,rate,time);
-        document.getElementById("interestRateResult").innerText=`Total Interest: $${interestRateTotal.tofixed(2)}`;
+        const interestRateTotal=interestRateCalculator(principal,rate,time);
+        document.getElementById("interestRateResult").innerText=`Total Interest: $${interestRateTotal.toFixed(2)}`;
 
     })
 
@@ -37,10 +37,23 @@ addEventListener("DOMContentLoaded",(event)=> {
         const rate=(parseFloat(document.getElementById("rate").value)/1200);
         const time=parseFloat(document.getElementById("time").value);
         const n=parseFloat(document.getElementById("n").value);
+        //Error handling
+        if (!principal) {
+            alert("Please provide a positive principal amount!");
+        }
+        if(!rate) {
+            alert("Rate needs to be numeric!");
+        }
+        if(!time) {
+            alert("Please fill the time in months!");
+        }  
+        if(!n) {
+            alert("Please provide a positive N (# of periods)!");
+        } 
 
         const returnInvestmentTotal=investmentReturnCalculator(principal,rate,time,n);
-        document.getElementById("InvestmentReturnResult").innerText =
-`Return on Investment: $${returnInvestmentTotal.toFixed(2)}`;
+        document.getElementById("investmentReturnResult").innerText =
+                `Return on Investment: $${returnInvestmentTotal.toFixed(2)}`;
     
     })
 
@@ -59,4 +72,3 @@ addEventListener("DOMContentLoaded",(event)=> {
     });
     
 
-}
